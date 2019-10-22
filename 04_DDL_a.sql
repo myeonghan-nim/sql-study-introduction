@@ -6,13 +6,14 @@ CREATE TABLE articles (
 .headers on
 .mode column
 
+-- add value and check table
 INSERT INTO articles VALUES ('hi', 'bye');
 SELECT * FROM articles;
 
--- alter table name
+-- change table name with alter
 ALTER TABLE articles RENAME to news;
 
--- add column
+-- add column to table
 ALTER TABLE news
 ADD COLUMN subtitle TEXT NOT NULL DEFAULT 1;
 

@@ -1,20 +1,21 @@
--- build scheme
+-- CREATE scheme
 CREATE TABLE classmates (
     id INTEGER PRIMARY KEY,
     name TEXT
 );
 
--- search table
+-- READ table
 .tables
 
--- search scheme
+-- READ scheme
 .schema classmates
 
--- delete table
+-- DELETE table
 DROP TABLE classmates;
+
 .tables
 
--- create sample table
+
 CREATE TABLE classmates (
     id INTEGER PRIMARY KEY,
     name TEXT,
@@ -23,6 +24,7 @@ CREATE TABLE classmates (
 );
 
 .tables
+
 .schema classmates
 
 DROP TABLE classmates;

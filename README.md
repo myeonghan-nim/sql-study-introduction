@@ -1,3 +1,3 @@
 # SQL
 
-- DB == Data is Big
+- DB means 'Data is Big'! 🗂️

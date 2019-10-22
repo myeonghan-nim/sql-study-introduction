@@ -1,13 +1,13 @@
--- create DB
+-- CREATE DB
 .databases
 
--- read .csv
+-- READ csv
 .mode csv
 .import HelloDB.csv examples
 
--- view beatiful
+-- READ csv
 .headers on
 .mode column
 
--- search table
+-- READ table
 SELECT * FROM examples;
