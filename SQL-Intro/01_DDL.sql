@@ -1,3 +1,5 @@
+-- DDL
+
 -- CREATE scheme
 CREATE TABLE classmates (
     id INTEGER PRIMARY KEY,
@@ -16,6 +18,7 @@ DROP TABLE classmates;
 .tables
 
 
+-- more practice
 CREATE TABLE classmates (
     id INTEGER PRIMARY KEY,
     name TEXT,

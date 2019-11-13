@@ -20,11 +20,12 @@
 
 * `db.sqlite3` 활용
 
-  * `sqlite3`  실행
+  * `sqlite3` 실행
 
     ```bash
     $ ls
     db.sqlite3 manage.py ...
+
     $ sqlite3 db.sqlite3
     ```
 
@@ -38,8 +39,11 @@
     auth_user                   django_session
     auth_user_groups            auth_user_user_permissions  
     users_user
+
     sqlite > .mode csv
+
     sqlite > .import users.csv users_user
+
     sqlite > SELECT COUNT(*) FROM users_user;
     100
     ```
@@ -53,11 +57,9 @@
     CREATE TABLE IF NOT EXISTS "users_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "first_name" varchar(10) NOT NULL, "last_name" varchar(10) NOT NULL, "age" integer NOT NULL, "country" varchar(10) NOT NULL, "phone" varchar(15) NOT NULL, "balance" integer NOT NULL);
     ```
 
-    
-
 ## 문제
 
-> 아래의 문제들을 sql문과 대응되는 orm을 작성 하세요.
+> 아래의 문제들을 sql문과 대응되는 orm을 작성하세요.
 
 ### 기본 CRUD 로직
 
@@ -89,7 +91,7 @@
    VALUES (101, '길동', '홍', 30, '제주특별자치도', '010-1234-1234', 100000);
    ```
 
-   * 하나의 레코드를 빼고 작성 후 `NOT NULL` constraint 오류를 orm과 sql에서 모두 확인 해보세요.
+   * 하나의 레코드를 빼고 작성 후 `NOT NULL` constraint 오류를 orm과 sql에서 모두 확인해보세요.
 
 3. 해당 user 레코드 조회
 
@@ -120,7 +122,8 @@
    ```python
    user = User.objects.get(id=102)
    user.delete()
-   # same as User.objects.get(id=102).delete()
+
+   # User.objects.get(id=102).delete()
    ```
 
    ```sql
@@ -133,7 +136,8 @@
 
    ```python
    User.objects.all().count()
-   # same as User.objects.count() or len(User.objects.all())
+
+   # User.objects.count() or len(User.objects.all())
    ```
 
    ```sql
@@ -164,7 +168,8 @@
 
    ```python
    User.objects.filter(age=30, last_name='김').count()
-   # same as User.objects.filter(age=30).filter(last_name='김').count()
+
+   # User.objects.filter(age=30).filter(last_name='김').count()
    ```
 
    ```sql
@@ -193,8 +198,6 @@
    SELECT first_name FROM users_user
    WHERE country='강원도' AND last_name='황';
    ```
-
-
 
 ### 정렬 및 LIMIT, OFFSET
 
@@ -230,16 +233,15 @@
    LIMIT 1 OFFSET 4;
    ```
 
-
-
 ### 표현식
+
 > 이하 모든 명령어는 다음의 명령어를 처리한 뒤 진행해야 합니다.
+>
 > `from django.db.models import Avg, Min, Max, Sum`
 
 1. 전체 평균 나이
 
    ```python
-   from django.db.models import Avg, Min, Max, Sum
    User.objects.aggregate(Avg('age'))
    ```
 

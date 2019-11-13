@@ -1,3 +1,5 @@
 # SQL
 
-- DB means 'Data is Big'! 🗂️
+```sqlite
+SELECT * FROM tables
+```

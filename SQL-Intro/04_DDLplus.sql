@@ -1,3 +1,4 @@
+-- DDL advanced
 CREATE TABLE articles (
     title TEXT NOT NULL,
     content TEXT NOT NULL
@@ -6,14 +7,16 @@ CREATE TABLE articles (
 .headers on
 .mode column
 
--- add value and check table
 INSERT INTO articles VALUES ('hi', 'bye');
+
 SELECT * FROM articles;
 
--- change table name with alter
+
+-- change table name
 ALTER TABLE articles RENAME to news;
 
--- add column to table
+
+-- add column into table
 ALTER TABLE news
 ADD COLUMN subtitle TEXT NOT NULL DEFAULT 1;
 
