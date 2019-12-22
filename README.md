@@ -1,4 +1,4 @@
-# SQL
+# README
 
 ```sqlite
 SELECT * FROM tables
