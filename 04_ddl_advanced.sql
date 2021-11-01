@@ -1,4 +1,3 @@
--- DDL advanced
 CREATE TABLE articles (
     title TEXT NOT NULL,
     content TEXT NOT NULL
@@ -11,14 +10,9 @@ INSERT INTO articles VALUES ('hi', 'bye');
 
 SELECT * FROM articles;
 
-
--- change table name
+-- ALTER
 ALTER TABLE articles RENAME to news;
-
-
--- add column into table
-ALTER TABLE news
-ADD COLUMN subtitle TEXT NOT NULL DEFAULT 1;
+ALTER TABLE news ADD COLUMN subtitle TEXT NOT NULL DEFAULT 1;
 
 SELECT * FROM news;
 
