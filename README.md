@@ -1,5 +1,5 @@
-# README
+# SQL-study-introduction
 
 ```sqlite
-SELECT * FROM tables
+SELECT * FROM tables;
 ```
