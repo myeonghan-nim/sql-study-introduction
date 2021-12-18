@@ -1,4 +1,6 @@
-# sql-study-introduction
+# Study: SQL
+
+## SQL
 
 ```sqlite
 SELECT * FROM tables;
