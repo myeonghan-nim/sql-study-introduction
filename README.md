@@ -1,7 +1,1 @@
-# Study: SQL
-
-## SQL
-
-```sqlite
-SELECT * FROM tables;
-```
+# Study: SQL syntax
